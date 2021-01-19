@@ -8,11 +8,28 @@
     <title>반응형 사이트 만들기 : 문서 셋팅</title>
 
     <!-- style -->
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/font-awesome.css">
 
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="반응형 사이트 만들기(title)" />
+    <meta property="og:url" content="http://richclub8.dothome.co.kr/responsive/html5/index.html" />
+    <meta property="og:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <meta property="og:site_name" content="반응형 사이트 만들기(site_name)" />
+    <meta property="og:description" content="반응형 사이트 따라하기(description)" />
+
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="반응형 사이트 만들기(title)" />
+    <meta name="twitter:description" content="반응형 사이트 만들기(description)." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+
+    
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="icon/favicon.ico">
+    <link rel="shortcut icon" href="icon/favicon-152.png">
     <link rel="apple-touch-icon-precomposed" href="icon/favicon-152.png">
     <link rel="icon" href="path/to/favicon.png">
     <link rel="icon" href="./icon/favicon-16.png" sizes="16x16"> 
@@ -21,13 +38,85 @@
     <link rel="icon" href="./icon/favicon-64.png" sizes="64x64"> 
     <link rel="icon" href="./icon/favicon-128.png" sizes="128x128">
 
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Abel&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header id ="header">
+        <div class="container">
+            <div class="row"></div>
+                <div class="header">
+                    <!-- 헤더메뉴  -->
+                    <div class="header_menu">
+                        <a href="#">Blog</a>
+                        <a href="#">GIt Hub</a>
+                        <a href="#">Webstandard</a>
+                    </div>
+                    <!-- 헤더타이틀 -->
+                    <div class="header_tit">
+                        <h1>Professional Web Publihser</h1><br>
+                        <a href="https://github.com/webstoryboy/responsive2019">sangjun</a>
+                    </div>
+                    <!-- 헤더 아이콘 -->
+                    <div class="header_icon">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-html5" aria-hidden="true"></i><span>HTML5</span></a></li>
+                            <li><a href="#"><i class="fa fa-github" aria-hidden="true"></i><span>Github</span></a></li>
+                            <li><a href="#" class="facebook"><i class="fa fa-facebook-square" aria-hidden="true"></i><span>Facebook</span></a></li>
+                            <li><a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i><span>twitter</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+    </header>
+    <nav>
+        <h1>반응형 사이트 전체 메뉴</h1>
+    </nav>
+    <article>
+        <h2>반응형 사이트 서브 타이틀</h2>
+    </article>
+    <main>
+    <section>
+        <h2>반응형 사이트 컨텐츠</h2>
+        <section>
+            <h3>왼쪽</h3>
+            <article><h4>왼쪽1</h4></article>
+            <article><h4>왼쪽2</h4></article>
+            <article><h4>왼쪽3</h4></article>
+        </section>
+        <section>
+            <h3>가운데</h3>
+            <article><h4>가운데1</h4></article>
+            <article><h4>가운데2</h4></article>
+            <article><h4>가운데3</h4></article>
+        </section>
+        <section>
+            <h3>오른쪽</h3>
+            <article><h4>오른쪽1</h4></article>
+            <article><h4>오른쪽2</h4></article>
+            <article><h4>오른쪽3</h4></article>
+        </section>
+    </section>
 
-
-    
+    </main>
+    <footer>
+        <h2>반응형 사이트 푸터</h2>
+    </footer>
     <!-- JavaScript Libraries -->
     <script src="js/jquery.min_1.12.4.js"></script>
     <script src="js/modernizr-custom.js"></script>
+    <script>
+        $(".facebook").click(function(e){
+            e.preventDefault();
+            window.open('https://www.facebook.com/sharer/sharer.php?u=' +encodeURIComponent(document.URL)+'&t='+encodeURIComponent(document.title), 'facebooksharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600'); 
+        });
+        $(".twitter").click(function(e){
+            e.preventDefault();
+            window.open('https://twitter.com/intent/tweet?text=[%EA%B3%B5%EC%9C%A0]%20' +encodeURIComponent(document.URL)+'%20-%20'+encodeURIComponent(document.title), 'twittersharedialog', 'menubar=no, toolbar=no, resizable=yes, scrollbars=yes, height=300, width=600');
+        });
+    </script>
+
 </body>
 </html>
